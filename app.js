@@ -52,49 +52,10 @@ function addanother(){
             if (response.addanother=== "Yes"){
                 generateTheTeam()
             }else {
-               
-              // createTeamMemberObjects()
               getFileName()
             }
         })    
  }
-
- //function createTeamMemberObjects(){
-        
-/*     for (var i = 0; i<teamMembers.length; i++){
-
-        if (teamMembers[i].role === "Manager"){
-            console.log ("success")
-            member = new Manager(
-                teamMembers.name,
-                teamMembers.id,
-                teamMembers.email,
-                teamMembers.officeNumber
-              );
-              console.log ("success")
-        }
-        if (teamMembers[i].role === "Engineer"){
-            member = new Engineer(
-                teamMembers.name,
-                teamMembers.id,
-                teamMembers.email,
-                teamMembers.officeNumber
-              );
-        }
-        if (teamMembers[i].role === "Intern"){
-            member = new Intern(
-                teamMembers.name,
-                teamMembers.id,
-                teamMembers.email,
-                teamMembers.officeNumber
-              );
-        }
-    }
-
-    generateFile()
-
- } */
-
 function generateTheTeam() {
         inquirer
     .prompt([
@@ -151,10 +112,10 @@ function ManagerON (i){
             response.id,
             response.Email,
             response.OfficeNumber
-          ); console.log(member)
+          ); 
         
-        let nextMember =  {name:  response.Name,role:  "Manager",email: response.Email,number: response.OfficeNumber}
-        teamMembers.push(nextMember)
+
+        teamMembers.push(member)
         addanother()
     })
 }  
@@ -190,8 +151,8 @@ function EngineerGH (i){
             response.Email,
             response.github
           );
-        let nextMember =  {name:  response.Name,role:  "Engineer",email: response.Email,number: response.github}
-        teamMembers.push(nextMember)
+        
+        teamMembers.push(member)
         addanother()
     })
 }  
@@ -227,8 +188,8 @@ function InternSN (i){
             response.Email,
             response.Schoolname
           ); 
-        let nextMember =  {name:  response.Name,role:"Intern",email: response.Email,number: response.Schoolname}
-        teamMembers.push(nextMember)
+        
+        teamMembers.push(member)
         addanother()
     })
 }
