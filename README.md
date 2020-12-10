@@ -1,4 +1,6 @@
 # TeamGenerator
+## Badges
+![GitHub license](https://img.shields.io/npm/l/node?style=plastic)
    
   ## Description
 
@@ -12,7 +14,7 @@
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [License](#license)
-  * 
+  
 
   ## Usage
   
